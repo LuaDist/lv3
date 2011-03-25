@@ -1,18 +1,18 @@
-# Copyright (C) 2007-2009 LuaDist.
+# Copyright (C) 2007-2011 LuaDist.
 # Created by Peter Kapec
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(lv3 C)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( lv3 C )
+cmake_minimum_required ( VERSION 2.6 )
+include ( dist.cmake )
 
-# Build
-ADD_LUA_MODULE(v3 lv3.c v3.def)
-TARGET_LINK_LIBRARIES(v3 ${ZLIB_LIBRARIES})
+install_lua_module ( v3 lv3.c v3.def )
+target_link_libraries ( v3 ${ZLIB_LIBRARIES} )
 
-# Install all files and documentation
-INSTALL (TARGETS v3 DESTINATION ${INSTALL_CMOD})
-INSTALL (FILES README DESTINATION ${INSTALL_DATA})
-INSTALL (FILES test.lua DESTINATION ${INSTALL_TEST})
+install_data ( README )
+install_test ( test.lua )
+
+add_lua_test ( test.lua )
+
