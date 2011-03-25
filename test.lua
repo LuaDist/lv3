@@ -1,3 +1,4 @@
+require 'v3'
 a=vector3(10,20,30)
 a=vector3(10,20)
 --a=vector3(10)
