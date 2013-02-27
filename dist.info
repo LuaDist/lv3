@@ -1,0 +1,28 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "Luiz Henrique de Figueiredo"
+depends = {
+[[lua ~> 5.1]],
+}
+
+desc = "This is a 3d-vector library for Lua 5.0. It is meant for learning."
+version = "20041203"
+maintainer = "Peter Kapec"
+files = {
+Runtime = {
+[[lib/lua/v3.so]],
+}
+,
+Data = {
+[[share/lv3/README]],
+}
+,
+Test = {
+[[share/lv3/test/test.lua]],
+}
+,
+}
+
+license = "Public domain"
+name = "lv3"
+url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lv3"
